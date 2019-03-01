@@ -122,8 +122,8 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-function select(currentValue){
-  animalNames.push(`Name: ${currentValue.animal_name} ,Scientific :${currentValue.scientific_name}`)}
+select = (currentValue) =>{
+  animalNames.push(`Name: ${currentValue.animal_name} ,Scientific:${currentValue.scientific_name}`)}
 
 zooAnimals.forEach(select);
 
@@ -137,15 +137,18 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 
-// function select(currentValue){
-//   lowerCase.push(currentValue.animal_name);
+//
+// const lowerCase = [];
+// for (let item of zooAnimals){
+//   lowerCase.push(item.animal_name);
 // }
 
-const lCase = [];
-console.log(lCase);
+const lower =zooAnimals.map(currentValue=>currentValue.animal_name.toLowerCase());
 
-// zooAnimals.forEach(select);
-// console.log(lowerCase.map(name => name.toLowerCase())); 
+
+console.log(lower);
+
+
 
 
 /* Request 3: .filter() 
@@ -153,14 +156,9 @@ console.log(lCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+result = zooAnimals.filter(element=>element.population <5);
+console.log(result);
 
-function counter(currentValue){
-  if(currentValue.population <5){
-  largerPopulation.push(currentValue)};
-}
-
-console.log(zooAnimals.forEach(counter));
 
 /* Request 4: .reduce() 
 
@@ -168,12 +166,21 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
-console.log(populationTotal);
+// 
+
+const reducer = (populationTotal,currentValue) => populationTotal + currentValue.population;
+console.log(zooAnimals.reduce(reducer,0));
+
+// zooAnimals.forEach(function(currentValue){pop_array.push(currentValue.population);});
+
+// console.log(pop_array);
+
 
 
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
-*/
+Already completed.  See above.
 
+*/
