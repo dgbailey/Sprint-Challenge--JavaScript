@@ -29,14 +29,33 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+This probably has to do with mutating an array vs returning a copy. Need to dig deeper.
 
 2. What is the difference between a function and a method?
+Methods are functions that are nested within objects.  Functions are not contained within objects.
 
 3. What is closure?
+    Closure is about scope and memory. Beginning from the inner most scope of an object, closure allows that object to have
+    memory for the contents of the surrounding outer lexical scopes in which it was created.
 
 4. Describe the four rules of the 'this' keyword.
 
+1. Window Binding: When the immediate outer scope of an object is the Global Scope (eg your function object is not a method nested in an
+     object), the 'this' keyword is bound to the window/console Object. "this" is a contextual tool.
+2. Implicit Binding: Adding a dot (.) to an Object adds a layer of context.  Typing myObject.method() gives (aka binds 'this') our method the myObject context
+    as opposed to the more global wondow/console Object context. This is done automatically (implicitly).
+3. New Binding: Some functions are written to be factories for making other functions. In this case, each new function needs a 'this'. On the factory
+function assembly line, 'this' is stamped into each new function being manufactured.  This way each function hits the ground 
+with 'this' referring to its own context. the machine used for stamping is the 'new' keyworod. myfunction = new FactoryFunction().
+
+4. Explicit Binding: JS gives us a very short direct ways to explicity bind contexts to the 'this' property of our Objects. For instance:
+    ObjectB.call(this,ObjectAattributes);. This statement gives object A two contexts in which to look for attributes.
+    ObjectA.attribute_from_A will look in the context of our ObjectA first?. ObjectA.attribute_B will look in the context of A, 
+    and then in the context of ObjectB
+    which we have also bound manually (not implicitly).
+
 5. Why do we need super() in an extended class?
+Super() enables us to link other inheritance chains (access to attributes and methods of ancestor objects) to our child object's context ('this').
 
 ## Project Set up
 
