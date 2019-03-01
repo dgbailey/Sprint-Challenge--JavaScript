@@ -138,10 +138,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 
 
-const lower =zooAnimals.map(currentValue=>currentValue.animal_name.toLowerCase());
+const lowerCase =zooAnimals.map(currentValue=>currentValue.animal_name.toLowerCase());
 
 
-console.log(lower);
+console.log(lowerCase);
 
 
 
