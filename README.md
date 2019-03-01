@@ -29,7 +29,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-Answer: .map returns a completely new array after calling the provided call back funciton on each element of the original array. The .forEach funciton does not return a new array.  For this reason there is the potential to mutate the original array.
+Answer: .map builds a completely new array after calling the provided call back funciton on each element of the original array. The .forEach funciton does not return a new array.  For this reason there is the potential to mutate the original array.
 
 2. What is the difference between a function and a method?
 Methods are functions that are nested within objects.  Functions are not contained within objects.
