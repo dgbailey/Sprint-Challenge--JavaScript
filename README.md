@@ -32,7 +32,7 @@ Edit this document to include your answers after each question. Make sure to lea
 Answer: .map builds a completely new array after calling the provided call back funciton on each element of the original array. The .forEach funciton does not return a new array.  For this reason there is the potential to mutate the original array.
 
 2. What is the difference between a function and a method?
-Methods are functions that are nested within objects.  Functions are not contained within objects.
+Methods are functions that are nested within objects.  Methods are called with dot (.) notation eg myObject.method(). Functions are not instantiated this way.
 
 3. What is closure?
     Closure is about scope and memory. Beginning from the inner most scope of an object, closure allows that object to have
