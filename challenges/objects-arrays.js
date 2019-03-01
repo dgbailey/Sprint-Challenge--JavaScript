@@ -137,11 +137,6 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 
-//
-// const lowerCase = [];
-// for (let item of zooAnimals){
-//   lowerCase.push(item.animal_name);
-// }
 
 const lower =zooAnimals.map(currentValue=>currentValue.animal_name.toLowerCase());
 
